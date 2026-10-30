@@ -1,0 +1,90 @@
+:root{
+  --carvao:#16181a; --fundo:#0f1112; --painel:#1c1f21; --linha:#33383b;
+  --texto:#d9d6cc; --suave:#9a9a92; --oliva:#7f9486; --bege:#c4b48a;
+  --alerta:#9e2b25; --alerta-bg:#2a1413;
+  --sans:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono:Consolas,"SFMono-Regular","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.6 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--bege)}
+:focus-visible{outline:2px solid var(--bege);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono)}
+
+/* topo */
+.topo{background:var(--carvao);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.marca{display:flex;align-items:center;gap:14px}
+.simbolo{width:44px;height:44px;flex:none}
+.marca b{display:block;font-size:1.15rem;letter-spacing:.18em}
+.marca span{display:block;font-size:.78rem;letter-spacing:.06em;color:var(--suave)}
+.sistema{font:.74rem/1 var(--mono);color:var(--oliva);border:1px solid var(--oliva);padding:7px 10px;display:flex;align-items:center;gap:8px}
+.sistema::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--oliva)}
+
+/* introdução */
+.intro{padding:44px 0 28px;border-bottom:1px solid var(--linha)}
+.doc-id{font:.76rem var(--mono);color:var(--bege);margin:0 0 10px}
+h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.05;margin:0 0 18px;font-weight:600;letter-spacing:-.01em}
+.intro p.lead{max-width:68ch;color:var(--texto);margin:0 0 22px}
+.aviso{display:flex;gap:14px;border:1px solid var(--alerta);background:var(--alerta-bg);padding:14px 16px;max-width:76ch;font-size:.9rem}
+.aviso strong{color:#d86a61;font-family:var(--mono);font-size:.78rem;white-space:nowrap}
+.indicadores{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border:1px solid var(--linha)}
+.indicadores div{padding:14px 16px;border-right:1px solid var(--linha)}
+.indicadores div:last-child{border-right:0}
+.indicadores dt{font-size:.74rem;color:var(--suave);margin:0 0 4px}
+.indicadores dd{margin:0;font:1.1rem var(--mono);color:var(--oliva)}
+.nota-ordem{font-size:.84rem;color:var(--suave);margin:18px 0 0;max-width:76ch;border-left:2px solid var(--bege);padding-left:12px}
+
+/* catálogo */
+.catalogo{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,480px),1fr));gap:24px;padding:36px 0 56px}
+.ficha{background:var(--painel);border:1px solid var(--linha);display:flex;flex-direction:column;position:relative}
+.ficha.quarentena{border-color:var(--alerta)}
+.ficha-topo{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--linha);font:.76rem var(--mono);color:var(--bege)}
+.ficha-topo .cod{font-size:.95rem;color:var(--texto);letter-spacing:.06em}
+.ficha h2{font-size:1.5rem;font-weight:600;margin:16px 16px 4px}
+.afin{margin:0 16px 14px;font-size:.85rem;color:var(--oliva)}
+figure{margin:0 16px;position:relative;aspect-ratio:4/3;background:#111314;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center}
+figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+figure .vazio{display:none;text-align:center;padding:16px;font:.74rem/1.5 var(--mono);color:var(--suave)}
+figure.sem-anexo .vazio{display:block}
+figcaption{position:absolute;left:0;bottom:0;background:rgba(15,17,18,.86);font:.68rem var(--mono);color:var(--suave);padding:3px 8px}
+.corpo{padding:16px}
+.corpo h3{font-size:.8rem;font-weight:600;color:var(--bege);margin:18px 0 6px;letter-spacing:.04em}
+.corpo h3:first-child{margin-top:0}
+.corpo p{margin:0;font-size:.94rem}
+blockquote{margin:0;padding:8px 12px;border-left:2px solid var(--linha);color:#c9c6bb;font-size:.92rem}
+.metricas{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--linha);margin:16px 0 0}
+.metricas div{padding:10px 12px}
+.metricas div+div{border-left:1px solid var(--linha)}
+.metricas dt{font-size:.72rem;color:var(--suave);margin:0 0 3px}
+.metricas dd{margin:0;font:.82rem var(--mono)}
+.barras{display:inline-flex;gap:3px;vertical-align:middle;margin-right:8px}
+.barras i{width:14px;height:6px;background:var(--linha)}
+.barras i.on{background:var(--oliva)}
+.alta .barras i.on{background:var(--alerta)}
+.estado{color:var(--oliva)}
+.estado.crit{color:#e0766d}
+.nota{margin:16px 0 0;padding:10px 12px;background:#17191a;border:1px dashed #4a4f52;font-size:.86rem;color:#bdbab0}
+.nota b{display:block;font:.7rem var(--mono);color:var(--suave);margin-bottom:3px;font-weight:400}
+.carimbo{position:absolute;top:56px;right:26px;transform:rotate(6deg);border:2px solid var(--alerta);color:#d86a61;font:700 .95rem var(--mono);letter-spacing:.14em;padding:4px 10px;background:rgba(15,17,18,.8);z-index:2}
+table.reg{width:100%;border-collapse:collapse;margin-top:6px;font:.78rem var(--mono)}
+table.reg th,table.reg td{border:1px solid var(--linha);padding:5px 8px;text-align:left}
+table.reg th{color:var(--suave);font-weight:400}
+.rasura{color:var(--suave);letter-spacing:.2em}
+
+/* rodapé */
+.rodape{background:var(--carvao);border-top:1px solid var(--linha);padding:28px 0;font:.76rem/1.8 var(--mono);color:var(--suave)}
+.rodape .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+.rodape strong{color:var(--texto);font-weight:400}
+
+@media (max-width:640px){
+  .indicadores{grid-template-columns:1fr}
+  .indicadores div{border-right:0;border-bottom:1px solid var(--linha)}
+  .indicadores div:last-child{border-bottom:0}
+  .aviso{flex-direction:column;gap:6px}
+  .catalogo{gap:18px}
+  .carimbo{top:50px;right:14px;font-size:.8rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

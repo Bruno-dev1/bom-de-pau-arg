@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2c22">
+  <meta name="description" content="Bom de Pau — madeireira paraense com tradição, qualidade e compromisso com a Amazônia.">
+  <title>Bom de Pau | Madeiras do Brasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Bom de Pau — início">
+      <span class="brand-mark" aria-hidden="true">♧</span>
+      <span class="brand-copy"><strong>BOM DE PAU</strong><small>MADEIRAS DO BRASIL</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#historia">Sobre nós</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#responsabilidade">Sustentabilidade</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="client-link" id="btn-open-login" aria-haspopup="dialog"><span aria-hidden="true">♙</span> Área do cliente</button>
+  </header>
+
+  <!-- Modal de Login -->
+  <div id="login-modal" class="login-overlay" role="dialog" aria-modal="true" aria-labelledby="login-title" hidden>
+    <div class="login-box">
+      <button class="login-close" id="btn-close-login" aria-label="Fechar login">✕</button>
+      <div class="login-brand">
+        <span class="brand-mark" aria-hidden="true">♧</span>
+        <span class="brand-copy"><strong>BOM DE PAU</strong><small>ÁREA DO CLIENTE</small></span>
+      </div>
+      <h2 id="login-title" class="login-heading">Acesso restrito</h2>
+      <p class="login-sub">Entre com suas credenciais para acessar o painel.</p>
+
+      <form id="login-form" novalidate>
+        <div class="field-group">
+          <label for="login-user">Usuário</label>
+          <input type="text" id="login-user" name="usuario" autocomplete="username" placeholder="seu.usuario" required>
+        </div>
+        <div class="field-group">
+          <label for="login-pass">Senha</label>
+          <div class="pass-wrap">
+            <input type="password" id="login-pass" name="senha" autocomplete="current-password" placeholder="••••••••" required>
+            <button type="button" class="toggle-pass" aria-label="Mostrar senha" data-target="login-pass">
+              <span aria-hidden="true">👁</span>
+            </button>
+          </div>
+        </div>
+        <p id="login-error" class="login-error" aria-live="assertive" hidden>Usuário ou senha incorretos.</p>
+        <button type="submit" class="login-submit">Entrar <span aria-hidden="true">⟶</span></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Painel pós-login -->
+  <div id="painel-modal" class="login-overlay" role="dialog" aria-modal="true" aria-labelledby="painel-title" hidden>
+    <div class="login-box painel-box">
+      <button class="login-close" id="btn-close-painel" aria-label="Fechar painel">✕</button>
+      <div class="login-brand">
+        <span class="brand-mark" aria-hidden="true">♧</span>
+        <span class="brand-copy"><strong>BOM DE PAU</strong><small>ÁREA DO CLIENTE</small></span>
+      </div>
+      <p class="painel-welcome">Bem-vindo, <strong id="painel-nome"></strong> 👋</p>
+      <h2 id="painel-title" class="login-heading">Painel do cliente</h2>
+      <div class="painel-grid">
+        <div class="painel-card"><span aria-hidden="true">📦</span><p>Meus pedidos</p></div>
+        <div class="painel-card"><span aria-hidden="true">📄</span><p>Notas fiscais</p></div>
+        <div class="painel-card"><span aria-hidden="true">📐</span><p>Orçamentos</p></div>
+        <div class="painel-card"><span aria-hidden="true">📞</span><p>Suporte</p></div>
+      </div>
+      <button class="login-logout" id="btn-logout">Sair da conta <span aria-hidden="true">↩</span></button>
+    </div>
+  </div>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">TRADIÇÃO QUE CONSTRÓI O AMANHÃ</p>
+        <h1>Madeira de qualidade,<br>com raízes no Pará.</h1>
+        <p class="hero-intro">A Bom de Pau é referência no setor madeireiro, unindo tradição, tecnologia e responsabilidade ambiental para levar o melhor da nossa região a cada projeto.</p>
+        <a class="outline-button" href="#produtos">Conheça nossos produtos <span aria-hidden="true">⟶</span></a>
+      </div>
+      <div class="hero-note"><span class="leaf">❧</span><span>DA FLORESTA<br>PARA O SEU<br>PROJETO</span></div>
+    </section>
+
+    <section class="story section-wrap" id="historia">
+      <div class="story-main">
+        <p class="eyebrow">NOSSA HISTÓRIA <span class="rule"></span></p>
+        <h2>Uma tradição familiar<br>que se tornou referência.</h2>
+        <p>Fundada em Belém do Pará, a Bom de Pau nasceu do compromisso da família Magno com o trabalho, a qualidade e o potencial da Amazônia. O que começou como um negócio familiar cresceu com a cidade e conquistou espaço no mercado madeireiro paraense.</p>
+        <p>Ao longo de sua trajetória, a empresa modernizou suas operações e ampliou sua atuação, preservando os valores que a fizeram crescer: respeito às pessoas, atenção à procedência da madeira e visão de longo prazo.</p>
+        <p class="story-note">A história da Bom de Pau é feita de muitas mãos, decisões difíceis e raízes profundas nesta terra.</p>
+      </div>
+      <div class="founder-copy">
+        <p class="eyebrow">O FUNDADOR</p>
+        <h3>Fábio Magno</h3>
+        <p class="founder-meta">38 anos <span>•</span> Belém, Pará</p>
+        <p>Nascido em uma tradicional família de Belém, Fábio Magno assumiu os negócios da família aos 18 anos, após a morte de seu pai. Desde então, conduz a Bom de Pau com visão estratégica, disciplina e o compromisso de honrar o legado que recebeu.</p>
+        <p>Sob sua liderança, a empresa buscou profissionalizar processos, fortalecer parcerias e construir uma reputação baseada na confiança.</p>
+        <blockquote>“O que construímos precisa durar mais do que uma geração.”</blockquote>
+        <p class="signature">— Fábio Magno</p>
+      </div>
+      <div class="founder-photo" role="img" aria-label="Retrato ilustrativo de um executivo em escritório de madeira">
+        <div class="photo-label">FÁBIO MAGNO <span>•</span> DIRETOR-PRESIDENTE</div>
+      </div>
+    </section>
+
+    <section class="values section-wrap" id="responsabilidade" aria-label="Nossos compromissos">
+      <article class="value-card"><span class="value-icon" aria-hidden="true">♣</span><div><h3>Sustentabilidade</h3><p>Responsabilidade ambiental e atenção à origem dos materiais.</p></div></article>
+      <article class="value-card"><span class="value-icon" aria-hidden="true">◇</span><div><h3>Qualidade</h3><p>Produtos selecionados e processos acompanhados de perto.</p></div></article>
+      <article class="value-card"><span class="value-icon" aria-hidden="true">♧</span><div><h3>Pessoas</h3><p>Valorização de quem faz a Bom de Pau acontecer.</p></div></article>
+      <article class="value-card"><span class="value-icon" aria-hidden="true">↗</span><div><h3>Crescimento</h3><p>Expansão com responsabilidade e visão de longo prazo.</p></div></article>
+    </section>
+
+    <section class="products section-wrap" id="produtos">
+      <div class="products-heading">
+        <div><p class="eyebrow">NOSSO TRABALHO</p><h2>Soluções em madeira<br>para diferentes projetos.</h2></div>
+        <p>Atendemos profissionais, empresas e clientes que valorizam materiais de qualidade, orientação técnica e fornecimento confiável.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card product-one"><div><span>01</span><h3>Madeira serrada</h3><p>Peças para aplicações estruturais e acabamento.</p></div></article>
+        <article class="product-card product-two"><div><span>02</span><h3>Tábuas e vigas</h3><p>Variedade de dimensões para obras e marcenaria.</p></div></article>
+        <article class="product-card product-three"><div><span>03</span><h3>Soluções sob medida</h3><p>Atendimento orientado às necessidades de cada projeto.</p></div></article>
+      </div>
+    </section>
+
+    <section class="mission" id="noticias">
+      <div class="mission-image"><div class="image-caption">Da nossa terra,<br>para o seu mundo.</div></div>
+      <div class="mission-copy">
+        <p class="eyebrow light">NOSSA MISSÃO <span class="rule"></span></p>
+        <h2>Construir com responsabilidade.</h2>
+        <p>Fornecer madeiras de qualidade, com excelência no atendimento e respeito ao meio ambiente, contribuindo para o desenvolvimento sustentável da Amazônia e do Brasil.</p>
+        <div class="mission-signature"><span></span><span class="mini-tree">♧</span><span></span></div>
+      </div>
+      <aside class="archive-panel" aria-label="Registro gráfico da empresa">
+        <p class="archive-label">REGISTRO INTERNO · SÉRIE HISTÓRICA</p>
+        <p class="cipher" title="Registro de arquivo">Jvuabkv, v kph kv Zluovy cpyá jvtv bt shkyãv. Vz jébz klzhwhyljlyãv jvt alyyícls lzayvukv, l haé vz lsltluavz zlyãv jvuzbtpkvz wlsv mvnv, l h alyyh l abkv xbl ulsh oá zlyãv lewvzavz.</p>
+        <p class="archive-caption">Os registros antigos preservam marcas<br>que o tempo não apaga.</p>
+        <p class="archive-footnote">Desde 1972, os livros de conferência da família seguem um ciclo de sete marcas.</p>
+        <span class="archive-stamp">BP · ARQUIVO</span>
+      </aside>
+    </section>
+
+    <section class="client-area section-wrap" id="area-cliente">
+      <div><p class="eyebrow">RELACIONAMENTO</p><h2>Conte com a nossa experiência.</h2><p>Para informações sobre disponibilidade, fornecimento e atendimento comercial, fale com nossa equipe.</p></div>
+      <a class="dark-button" href="#contato">Fale com a Bom de Pau <span aria-hidden="true">⟶</span></a>
+    </section>
+  </main>
+
+  <footer id="contato" class="site-footer">
+    <div class="footer-main section-wrap">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">♧</span>
+        <span class="brand-copy"><strong>BOM DE PAU</strong><small>MADEIRAS DO BRASIL</small></span>
+      </a>
+      <address>
+        <p><span aria-hidden="true">⌖</span> Av. da Floresta, 1254 — Belém, PA</p>
+        <p><span aria-hidden="true">☎</span> (91) 3182-4400</p>
+        <p><span aria-hidden="true">✉</span> contato@bomdepau.com.br</p>
+      </address>
+      <div class="footer-links"><a href="#historia">A empresa</a><a href="#responsabilidade">Responsabilidade</a><a href="#contato">Fale conosco</a></div>
+      <div class="footer-motto">TRADIÇÃO<br>QUALIDADE<br>SUSTENTABILIDADE</div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Bom de Pau. Todos os direitos reservados.</span><span><a href="#privacidade">Privacidade</a> <i>|</i> <a href="#termos">Termos de uso</a></span></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
