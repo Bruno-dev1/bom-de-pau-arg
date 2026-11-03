@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Projeto Novo Mundo — Bom de Pau | Intranet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/projeto-anjo.css">
+</head>
+<body data-nivel="0">
+
+<header class="topo">
+  <div class="marca">
+    <span class="logo" aria-hidden="true">BP</span>
+    <div>
+      <strong>BOM DE PAU</strong>
+      <span class="mono sec">INTRANET CORPORATIVA</span>
+    </div>
+  </div>
+  <div class="topo-dir">
+    <span class="restrito mono"><i aria-hidden="true"></i>ACESSO ULTRARRESTRITO</span>
+    <span class="usuario mono">USUÁRIO: <b id="usuario">—</b></span>
+    <button type="button" id="btn-sair" class="btn-sair">ENCERRAR SESSÃO</button>
+  </div>
+</header>
+
+<nav class="trilha mono" aria-label="Trilha de navegação">
+  <span>DIRETORIA</span><b>/</b><span>PESQUISA E DESENVOLVIMENTO</span><b>/</b><span>PROJETOS SIGILOSOS</span><b>/</b><span class="atual">NOVO MUNDO</span>
+</nav>
+
+<main class="pagina">
+
+  <section class="titulo">
+    <div>
+      <p class="mono sec">DOC. PA-001 · CLASSIFICAÇÃO: RESTRITO · CÓPIA ÚNICA</p>
+      <h1>PROJETO NOVO MUNDO</h1>
+      <p class="sub">Registro interno de pesquisa, observação e contenção de entidade anômala.</p>
+    </div>
+    <div class="selo" role="img" aria-label="Selo de documento restrito">
+      <span>DOCUMENTO</span><strong>RESTRITO</strong><span class="mono">DIRETORIA · NÍVEL 4</span>
+    </div>
+  </section>
+
+  <aside class="aviso" role="note">
+    <strong>AVISO DE SEGURANÇA</strong>
+    <p>O acesso à ala de contenção exige autorização expressa da diretoria. Não permaneça sozinho na sala de observação.</p>
+  </aside>
+
+  <div class="grade">
+
+    <section class="painel entidade" aria-labelledby="h-ent">
+      <h2 id="h-ent" class="mono">01 / IDENTIFICAÇÃO DA ENTIDADE</h2>
+      <figure class="foto">
+        <img id="img-samael" src="img/samael-contido.png" alt="Samael: entidade com múltiplas asas cobertas de olhos, presa a uma estrutura cruciforme de madeira por correntes">
+        <figcaption class="mono sec">PA-001 · CÂMARA C-07 · REGISTRO DE ADMISSÃO</figcaption>
+      </figure>
+      <dl class="dados">
+        <div><dt>Nome da entidade</dt><dd>SAMAEL</dd></div>
+        <div><dt>Identificador</dt><dd class="mono">PA-001</dd></div>
+        <div><dt>Classificação</dt><dd>Não determinada.</dd></div>
+        <div><dt>Morfologia</dt><dd>Humanoide não convencional.</dd></div>
+        <div class="larga"><dt>Características</dt><dd>Múltiplas estruturas alares, diversos olhos distribuídos pelas asas e um olho central.</dd></div>
+        <div class="larga"><dt>Posição observada</dt><dd>Fixada em uma estrutura cruciforme.</dd></div>
+        <div class="larga"><dt>Responsável pelo projeto</dt><dd>Fábio Magnum.</dd></div>
+      </dl>
+      <blockquote class="obs">
+        <span class="mono sec">OBSERVAÇÃO</span>
+        "A designação Samael foi mantida por determinação da diretoria. A origem do nome não consta no relatório de admissão."
+      </blockquote>
+    </section>
+
+    <div class="lateral">
+
+      <section class="painel" aria-labelledby="h-cond">
+        <h2 id="h-cond" class="mono">02 / CONDIÇÃO OPERACIONAL</h2>
+        <div class="estado" id="estado-box">
+          <span class="mono sec">ESTADO DA CONTENÇÃO</span>
+          <strong id="estado-txt">ESTÁVEL</strong>
+        </div>
+        <div class="medida">
+          <div class="medida-t"><span>Integridade da estrutura</span><b class="mono">96%</b></div>
+          <div class="barra"><i id="barra-int" style="width:96%"></i></div>
+        </div>
+        <div class="medida">
+          <div class="medida-t"><span>Atividade anômala</span><b class="mono" id="ativ-txt">BAIXA</b></div>
+          <div class="barra"><i id="barra-ativ" style="width:12%"></i></div>
+        </div>
+        <ul class="lista-st mono">
+          <li><span>Monitoramento</span><b class="on"><i aria-hidden="true"></i>ONLINE</b></li>
+          <li><span>Última atualização</span><b id="atualizacao">12/01/2026</b></li>
+        </ul>
+      </section>
+
+      <section class="painel" aria-labelledby="h-loc">
+        <h2 id="h-loc" class="mono">03 / LOCALIZAÇÃO</h2>
+        <p class="local">COMPLEXO INDUSTRIAL BOM DE PAU</p>
+        <svg class="planta" viewBox="0 0 320 180" role="img" aria-label="Planta esquemática do complexo, com o setor C-07 marcado">
+          <g fill="none" stroke="#303a35" stroke-width="1.5">
+            <rect x="6" y="6" width="308" height="168"/>
+            <rect x="18" y="18" width="80" height="50"/><rect x="108" y="18" width="80" height="50"/><rect x="198" y="18" width="104" height="50"/>
+            <rect x="18" y="112" width="80" height="50"/><rect x="108" y="112" width="80" height="50"/>
+            <path d="M6 90 H314" stroke-dasharray="4 4"/>
+          </g>
+          <rect x="198" y="112" width="104" height="50" fill="rgba(139,35,35,.25)" stroke="#a33b3b" stroke-width="1.5"/>
+          <circle cx="250" cy="137" r="5" fill="#a33b3b" class="pulso"/>
+          <g class="mono-svg" fill="#8b9890">
+            <text x="24" y="46">A</text><text x="114" y="46">B</text><text x="204" y="46">ADM.</text>
+            <text x="24" y="140">D</text><text x="114" y="140">E</text>
+            <text x="206" y="130" fill="#e2e8e2">C-07</text><text x="206" y="156">SUBNÍVEL 04</text>
+          </g>
+        </svg>
+        <dl class="dados compacto">
+          <div><dt>Instalação</dt><dd>Unidade de Pesquisa C-07.</dd></div>
+          <div><dt>Ambiente</dt><dd>Câmara de contenção isolada.</dd></div>
+          <div><dt>Setor</dt><dd class="mono">C / Subnível 04.</dd></div>
+          <div><dt>Acesso</dt><dd>Diretoria / autorização nível 4.</dd></div>
+        </dl>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="painel diario" aria-labelledby="h-dia">
+    <h2 id="h-dia" class="mono">04 / DIÁRIO DE OBSERVAÇÃO</h2>
+    <ol class="linha" id="linha" role="tablist" aria-label="Registros de observação"></ol>
+    <article class="doc" id="doc" role="tabpanel" aria-live="polite" tabindex="0"></article>
+  </section>
+
+</main>
+
+<footer class="rodape mono sec">BOM DE PAU · INTRANET CORPORATIVA · USO INTERNO · A REPRODUÇÃO É PROIBIDA</footer>
+
+<script src="js/projeto-anjo.js"></script>
+</body>
+</html>
